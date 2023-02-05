@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventura_App.SignIn"
+             Shell.NavBarIsVisible="False"
+             Title="SignIn">
+    <ScrollView>
+        <StackLayout Margin="40">
+            <Image Source="logosvg.svg" WidthRequest="180" HeightRequest="180"/>
+            <StackLayout Spacing="20">
+                <StackLayout>
+                    <Entry x:Name="EmailEntry" Placeholder="Email"/>
+                    <BoxView Color="#ACACBE" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout>
+                    <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
+                    <BoxView Color="#ACACBE" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Button x:Name="SignInButton" CornerRadius="30" HeightRequest="50" Text="Sign In" FontSize="20" FontAttributes="Bold" Margin="0,20,0,0"/>
+                <Label FontAttributes="Bold" Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="Don't have an account? " VerticalTextAlignment="End" TextColor="Gray" FontSize="16"/>
+                    <Label Text="Sign Up" FontSize="16" FontAttributes="Bold" TextColor="{x:StaticResource Primary}" VerticalTextAlignment="End"/>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignUp"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
